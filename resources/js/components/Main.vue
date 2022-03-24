@@ -23,6 +23,12 @@
                     <div v-else>
                         CATEGORIA: -
                     </div>
+                    <div>
+                        TAG: 
+                        <span v-for="(tag, index) in elemento.tags" :key="index">
+                            <i>{{tag.name}} </i>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

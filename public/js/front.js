@@ -2015,6 +2015,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Main",
   data: function data() {
@@ -3287,6 +3293,19 @@ var render = function () {
                     "\n                    CATEGORIA: -\n                "
                   ),
                 ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              [
+                _vm._v("\n                    TAG: \n                    "),
+                _vm._l(elemento.tags, function (tag, index) {
+                  return _c("span", { key: index }, [
+                    _c("i", [_vm._v(_vm._s(tag.name) + " ")]),
+                  ])
+                }),
+              ],
+              2
+            ),
           ])
         }),
         0

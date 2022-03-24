@@ -2001,6 +2001,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Main",
   data: function data() {
@@ -2036,7 +2050,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".post-container[data-v-b9c20fb8] {\n  margin-top: 100px;\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n}\n.post-container .post-card[data-v-b9c20fb8] {\n  border: 1px solid black;\n  width: 30%;\n  margin: 10px auto;\n}", ""]);
+exports.push([module.i, ".post-container[data-v-b9c20fb8] {\n  margin-top: 100px;\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n}\n.post-container .post-card[data-v-b9c20fb8] {\n  border: 1px solid black;\n  width: 30%;\n  margin: 10px auto;\n  display: flex;\n  flex-direction: column;\n  text-align: center;\n}\n.post-container .post-card img[data-v-b9c20fb8] {\n  height: 100px;\n  width: auto;\n}", ""]);
 
 // exports
 
@@ -3235,15 +3249,44 @@ var render = function () {
         { staticClass: "post-container" },
         _vm._l(_vm.posts, function (elemento) {
           return _c("div", { key: elemento.id, staticClass: "post-card" }, [
-            _c("p", [_vm._v(_vm._s(elemento.title))]),
+            _c("div", [_vm._v("TITOLAZZO: " + _vm._s(elemento.title))]),
             _vm._v(" "),
-            _c("p", [
+            _c("div", [
               _vm._v(
                 "\n                    " +
                   _vm._s(elemento.content) +
                   "\n                "
               ),
             ]),
+            _vm._v(" "),
+            elemento.image != null
+              ? _c("div", [
+                  _c("img", {
+                    attrs: { src: "storage/" + elemento.image, alt: "" },
+                  }),
+                ])
+              : _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src: __webpack_require__(/*! ../../../public/img/empty_image.jpg */ "./public/img/empty_image.jpg"),
+                      alt: "",
+                    },
+                  }),
+                ]),
+            _vm._v(" "),
+            elemento.category != null
+              ? _c("div", [
+                  _vm._v(
+                    "\n                    CATEGORIA: " +
+                      _vm._s(elemento.category.name) +
+                      "\n                "
+                  ),
+                ])
+              : _c("div", [
+                  _vm._v(
+                    "\n                    CATEGORIA: -\n                "
+                  ),
+                ]),
           ])
         }),
         0
@@ -15433,6 +15476,17 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+
+/***/ "./public/img/empty_image.jpg":
+/*!************************************!*\
+  !*** ./public/img/empty_image.jpg ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/empty_image.jpg?933e71cd36fd93f55547f7f9ca408bd2";
 
 /***/ }),
 
